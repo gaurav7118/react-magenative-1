@@ -5,9 +5,9 @@ import SidebarFooter from "./SidebarFooter";
 
 class MobileBody extends Component {
     render() {
-        var { name, details, footerTitle, hideIcon, hideArrowIcon, hideIntemBorder, hideSidebarheader, hideSidebarFooter,userCellColor } = this.props.values;
+        var { name, details, footerTitle, hideIcon, hideArrowIcon, hideIntemBorder, hideSidebarheader, hideSidebarFooter,userCellColor,fontSize,fontWeight,fontStyle } = this.props.values;
         var headerInfo = { name, details,userCellColor };
-        var bodyInfo = { hideIcon, hideArrowIcon, hideIntemBorder };
+        var bodyInfo = { hideIcon, hideArrowIcon, hideIntemBorder,fontSize,fontWeight,fontStyle };
         var footerInfo = { footerTitle }
         return (
             <div className="mob-tab-body app-drawer-container">

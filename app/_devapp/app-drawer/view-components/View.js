@@ -5,8 +5,8 @@ import MobileBody from "./MobileBody";
 
 class View extends Component {
   render() {
-    var { name, details, footerTitle, hideIcon, hideArrowIcon,hideIntemBorder,hideSidebarheader,hideSidebarFooter,userCellColor } = this.props.values;
-    var bodyData = { name, details, footerTitle, hideIcon, hideArrowIcon,hideIntemBorder,hideSidebarheader,hideSidebarFooter,userCellColor };
+    var { name, details, footerTitle, hideIcon, hideArrowIcon, hideIntemBorder, hideSidebarheader, hideSidebarFooter, userCellColor, fontSize, fontWeight, fontStyle } = this.props.values;
+    var bodyData = { name, details, footerTitle, hideIcon, hideArrowIcon, hideIntemBorder, hideSidebarheader, hideSidebarFooter, userCellColor, fontSize, fontWeight, fontStyle };
     return (
       <div className="Polaris-Layout__Section Polaris-Layout__Section--oneHalf">
         <div className="Polaris-Card">

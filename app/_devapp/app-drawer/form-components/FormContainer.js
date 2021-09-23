@@ -39,7 +39,7 @@ class FormContainer extends Component {
             <div className="Polaris-Card">
               <div className="components-tools">
                 <NavBar handleClick={handleClick} navList={navList} />
-                <FontForm />
+                <FontForm handleChange={handleChange}/>
               </div>
             </div>
           </div>
