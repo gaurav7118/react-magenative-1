@@ -19,6 +19,7 @@ class AppDrawer extends Component {
         fontWeight: '',
         fontStyle: '',
         userCellColor: 'white',
+        headerIcon:'https://place-hold.it/30x30?text=SV&fontsize=12',
         name: 'Shubham Verma',
         details: 'shubham@gmail.com',
         footerTitle: '2019 Magenative'
@@ -72,8 +73,8 @@ class AppDrawer extends Component {
         //             console.log(error);
         //         });
     render() {
-        const { step, name, details, footerTitle, hideIcon, hideArrowIcon, hideIntemBorder, hideSidebarheader, hideSidebarFooter, userCellColor, fontSize, fontWeight, fontStyle } = this.state;
-        const componentValues = { name, details, footerTitle, hideIcon, hideArrowIcon, hideIntemBorder, hideSidebarheader, hideSidebarFooter, userCellColor, fontSize, fontWeight, fontStyle };
+        const { step, name, details, footerTitle, hideIcon, hideArrowIcon, hideIntemBorder, hideSidebarheader, hideSidebarFooter, userCellColor, fontSize, fontWeight, fontStyle,headerIcon } = this.state;
+        const componentValues = { name, details, footerTitle, hideIcon, hideArrowIcon, hideIntemBorder, hideSidebarheader, hideSidebarFooter, userCellColor, fontSize, fontWeight, fontStyle,headerIcon };
         return (
             <div className="Polaris-Page__Content">
                 <div className="Polaris-Tabs__Panel">

@@ -1,24 +1,52 @@
-import React, { Component } from "react";
-import { ReactSortable } from "react-sortablejs";
- 
-interface BasicClassState {
-  list: { id: string; name: string }[];
+import React, { Component, Fragment } from "react";
+import CropperModal from './../modal/CropperModal';
+
+class UploadForm extends Component {
+    state = {
+        showModal: false,
+        imageUrl: '#'
+    }
+    render() {
+        const imageChange = (event) => {
+            var imageUrl = URL.createObjectURL(event.target.files[0]);
+            //window.cropperCheck;
+            this.setState({ imageUrl: imageUrl });
+            this.setState({ showModal: true });
+            //this.props.handleChange('headerIcon', imageUrl);
+            //console.log(this.state);
+        }
+        const closeModal = () => {
+            this.setState({ showModal: false });
+        }
+        return (
+            <div className="components-tools-inner-wrap">
+                <div id="tab-content-update" className="Polaris-Card has-overflow custom-tab-content">
+                    <div className="Polaris-Card__Section p-0">
+                        <div className="Polaris-Card__SectionHeader accordion-header p-20">
+                            <h3 className="Polaris-Subheading">User Setting</h3>
+                        </div>
+                        <div className="Polaris-FormLayout accordion-body px-20 pb-20" style={{ "display": "none" }}>
+                            <div className="Polaris-FormLayout__Item" data-component-wrap="user-logo-upload">
+                                <div className="">
+                                    <div className="Polaris-Labelled__LabelWrapper">
+                                        <div className="Polaris-Label"><label id="TextField4Label" htmlFor="TextField4" className="Polaris-Label__Text">Upload Logo</label></div>
+                                    </div>
+                                    <div className="Polaris-TextField has-file-upload">
+                                        <input id="upload_image" type="file" className="Polaris-TextField__Input" onChange={imageChange} />
+                                        <span className="file-upload-icon"></span>
+                                        <span className="file-upload-value">Upload a png,gif, Jpeg file</span>
+                                        <div className="Polaris-TextField__Backdrop"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <CropperModal showModal={this.state.showModal} imageUrl={this.state.imageUrl} closeModal={closeModal} croppedImage={this.props.handleChange} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
- 
-export class BasicClass extends Component<{}, BasicClassState> {
-  state: BasicClassState = {
-    list: [{ id: "1", name: "shrek" }],
-  };
-  render() {
-    return (
-      <ReactSortable
-        list={this.state.list}
-        setList={(newState) => this.setState({ list: newState })}
-      >
-        {this.state.list.map((item) => (
-          <div key={item.id}>{item.name}</div>
-        ))}
-      </ReactSortable>
-    );
-  }
-}
+export default UploadForm;

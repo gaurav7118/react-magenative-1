@@ -4,7 +4,7 @@ import SidebarBodyElement from "./SidebarBodyElement";
 class SidebarBody extends Component {
     render() {
         var bodyItems = ["My Orders", "My Wishlist", "My Cart", "My Account"];
-        const { hideIcon, hideArrowIcon, hideIntemBorder, fontSize, fontWeight, fontStyle } = this.props.values;
+        const { hideIcon, hideArrowIcon, hideIntemBorder, fontSize, fontWeight, fontStyle,headerIcon } = this.props.values;
         return (
             // bodyItems.map((item) => {
             //     <SidebarBodyElement values={item} />

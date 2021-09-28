@@ -7,7 +7,7 @@ import UploadForm from "./forms/UploadForm";
 
 class FormContainer extends Component {
   render() {
-    const { values, step, handleChange, handleClick, toggleClick } = this.props;
+    const { values, step, handleChange, handleClick, toggleClick} = this.props;
     var navList = ["Layout", "Color", "Font", "Upload"];
 
     switch (step) {
@@ -39,7 +39,7 @@ class FormContainer extends Component {
             <div className="Polaris-Card">
               <div className="components-tools">
                 <NavBar handleClick={handleClick} navList={navList} />
-                <FontForm handleChange={handleChange}/>
+                <FontForm handleChange={handleChange} />
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ class FormContainer extends Component {
             <div className="Polaris-Card">
               <div className="components-tools">
                 <NavBar handleClick={handleClick} navList={navList} />
-                <UploadForm />
+                <UploadForm handleChange={handleChange} />
               </div>
             </div>
           </div>
