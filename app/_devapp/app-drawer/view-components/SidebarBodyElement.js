@@ -11,7 +11,7 @@ class SidebarBodyElement extends Component {
                     </div>
                     <div className="drawer-option">
                         <div className="drawer-option-title drawer-title-color" style={{ 'fontSize': fontSize, 'fontWeight': fontWeight, 'fontStyle': fontStyle }}>{name}</div>
-                    </div>
+                    </div>                    
                     <div className="drawer-arrow-icon arrow-color" style={hideArrowIcon ? { 'display': 'none' } : { 'display': 'block' }}>
                         <div className="fa fa-angle-right"></div>
                     </div>

@@ -7,7 +7,7 @@ class SidebarHeader extends Component {
     return (
       <div className="dev-components dev-component-drawer drawer-account-info p-relative" style={{ backgroundColor: userCellColor }}>
         <div className="user-logo-img">
-          <img src={headerIcon} alt="icon" alt="" />
+          <img src={headerIcon} alt="icon" alt="" height={50} width={50} />
         </div>
         <div className="user-info">
           <div className="user-name user-title-color">{name}</div>

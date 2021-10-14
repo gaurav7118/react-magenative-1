@@ -19,7 +19,7 @@ class AppDrawer extends Component {
         fontWeight: '',
         fontStyle: '',
         userCellColor: 'white',
-        headerIcon:'https://place-hold.it/30x30?text=SV&fontsize=12',
+        headerIcon:'https://place-hold.it/30x30?text=SV&fontsize=15',
         name: 'Shubham Verma',
         details: 'shubham@gmail.com',
         footerTitle: '2019 Magenative'
@@ -27,7 +27,7 @@ class AppDrawer extends Component {
 
     handleChange = (name, val) => {
         this.setState({ [name]: val });
-        console.log(name + ':' + val);
+        //console.log(name + ':' + val);
         //this.setState({ [input]: e.target.checked });
     };
 
