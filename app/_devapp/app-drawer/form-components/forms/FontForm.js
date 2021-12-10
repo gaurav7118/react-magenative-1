@@ -21,7 +21,7 @@ class FontForm extends Component {
         const { handleChange } = this.props;
         return (
             <div className="components-tools-inner-wrap">
-                <div id="tab-content-font" className="Polaris-Card has-overflow custom-tab-content">
+                <div id="tab-content-font" className="Polaris-Card has-overflow">
                     <div className="Polaris-Card__Section">
                         <div className="Polaris-FormLayout" data-component-wrap="font-update-wrapper">
                             <SelectBox handleChange={handleChange} fontData={this.fontSize} label="Font Size" name="fontSize" />

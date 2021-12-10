@@ -13,11 +13,11 @@ class MobileBody extends Component {
             <div className="mob-tab-body app-drawer-container">
                 <div className="app-drawer" data-component-type="app-drawer" data-timestamp="123456" style={{ height: '100%' }}>
                     <div className="app-drawer-inner drawer-Color">
-                        {!hideSidebarheader ?
+                        {!parseInt(hideSidebarheader) ?
                             <SidebarHeader values={headerInfo} /> : null
                         }
                         <SidebarBody values={bodyInfo} />
-                        {!hideSidebarFooter ?
+                        {!parseInt(hideSidebarFooter) ?
                             <SidebarFooter values={footerInfo} /> : null
                         }
                     </div>

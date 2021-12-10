@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-import NavBarItem from "./NavBarItem";
 
 class NavBar extends Component {
     render() {
@@ -7,7 +6,9 @@ class NavBar extends Component {
         return (
             <ul className="layout-form-tabs">
                 {navList.map((name, index) => (
-                    <NavBarItem key={index} handleClick={handleClick} name={name} step={index + 1} />
+                    <li key={index} className={'tab-' + name.toLowerCase()} onClick={() => handleClick(index + 1)}>
+                        <a href="">{name}</a>
+                    </li>
                 ))}
             </ul>
         )

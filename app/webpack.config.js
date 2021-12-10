@@ -71,7 +71,7 @@ let config = {
 		]
 	},
 	externals: {
-		myApp: 'myApp',
+		moduleData: 'moduleData',
 	},
 	plugins: [
 		new ExtractTextPlugin(path.join('..', 'css', 'app.css')),

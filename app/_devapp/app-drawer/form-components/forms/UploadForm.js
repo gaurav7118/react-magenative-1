@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import CropperModal from "../modal/CropperModal";
+import Sortable from "../sortable/Sortable";
 // import TestModal from "../modal/TestModal";
 //import TestModal from './../modal/TestModal';
 
@@ -19,7 +20,7 @@ class UploadForm extends Component {
         }
         return (
             <div className="components-tools-inner-wrap">
-                <div id="tab-content-update" className="Polaris-Card has-overflow custom-tab-content">
+                <div id="tab-content-update" className="Polaris-Card has-overflow">
                     <div className="Polaris-Card__Section p-0">
                         <div className="Polaris-Card__SectionHeader accordion-header p-20">
                             <h3 className="Polaris-Subheading">User Setting</h3>
@@ -42,6 +43,9 @@ class UploadForm extends Component {
                         <div>
                             <CropperModal showModal={this.state.showModal} imageUrl={this.state.imageUrl} closeModal={closeModal} croppedImage={this.props.handleChange} fixedHeight={100} fixedWidth={100} />
                         </div>
+                    </div>
+                    <div className="Polaris-Card__Section p-0">
+                        <Sortable />
                     </div>
                 </div>
             </div>

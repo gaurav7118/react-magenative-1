@@ -1,29 +1,22 @@
-import React, { Component, Fragment } from 'react';
-import { render } from 'react-dom';
-import enTranslations from '@shopify/polaris/locales/en.json';
-import { AppProvider, Heading } from '@shopify/polaris';
-import "@shopify/polaris/dist/styles.css";
-import UserForm from './UserForm';
-import AppDrawer from './app-drawer/AppDrawer'
+import React, { Component, Fragment } from "react";
+import { render } from "react-dom";
+import AppDrawer from "./app-drawer/AppDrawer";
 
 /** We are importing our index.php my app Vairaible */
-import myApp from 'myApp';
+import moduleData from "moduleData";
 
 /* globals __webpack_public_path__ */
 __webpack_public_path__ = `${window.STATIC_URL}/app/assets/bundle/`;
 
-
-class Myapp extends Component {
+class App extends Component {
     render() {
-
-        const { user: { name, email }, logged } = myApp;
-
+        const { url } = moduleData;
         return (
-            <AppProvider i18n={enTranslations} theme={{ colorScheme: "light" }} >
-                <AppDrawer />
-            </ AppProvider>
-        )
+            <div>
+                <AppDrawer url={url} />
+            </div>
+        );
     }
 }
 
-render(<Myapp />, document.getElementById('app'));
+render(<App />, document.getElementById("app"));
